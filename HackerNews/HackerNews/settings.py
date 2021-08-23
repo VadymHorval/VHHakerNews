@@ -87,10 +87,10 @@ DATABASE = "simpledbmamager"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dbkanbvmf7cg4p',
-        'USER': 'laektdypdpvrkq',
-        'PASSWORD': '66ce5def8eae021fce8a04069f81323f9665e75d836d565b554e9d5d0d41c9f9',
-        'HOST': 'ec2-54-72-155-238.eu-west-1.compute.amazonaws.com',
+        'NAME': 'd1e01vbso097dc',
+        'USER': 'nzkkquvhmoqsts',
+        'PASSWORD': '39e1c8a1575f178fe7b8e2653769944721b6acdc2bde639cd808bccb38ce948d',
+        'HOST': 'ec2-54-154-101-45.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
 }
