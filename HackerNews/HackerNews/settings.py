@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +27,7 @@ SECRET_KEY = 'django-insecure-+db0i_3rzin@9tlvsdiv93a2n@41uu(@u@76r&f4v21=!ty2-m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ddah.herokuapp.com]
 
 
 # Application definition
@@ -84,10 +86,10 @@ DATABASE = "simpledbmamager"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'SoftServe',
-        'HOST': 'localhost',
+        'NAME': 'dbkanbvmf7cg4p',
+        'USER': 'laektdypdpvrkq',
+        'PASSWORD': '66ce5def8eae021fce8a04069f81323f9665e75d836d565b554e9d5d0d41c9f9',
+        'HOST': 'ec2-54-72-155-238.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
 }
@@ -129,7 +131,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+#STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
